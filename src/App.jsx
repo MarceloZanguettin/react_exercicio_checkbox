@@ -19,51 +19,17 @@ const App = () => {
 
   return (
     <form>
-      <label>
-        <input
-          type="checkbox"
-          value="azul"
-          checked={handleChecket('azul')}
-          onChange={handleChange}
-        />
-        Azul
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          value="vermelho"
-          checked={handleChecket('vermelho')}
-          onChange={handleChange}
-        />
-        Vermelho
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          value="verde"
-          checked={handleChecket('verde')}
-          onChange={handleChange}
-        />
-        Verde
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          value="amarelo"
-          checked={handleChecket('amarelo')}
-          onChange={handleChange}
-        />
-        Amarelo
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          value="roxo"
-          checked={handleChecket('roxo')}
-          onChange={handleChange}
-        />
-        Roxo
-      </label>
+      {coresArray.map((cor) => (
+        <label key={cor}>
+          <input
+            type="checkbox"
+            value={cor}
+            checked={handleChecket(cor)}
+            onChange={handleChange}
+          />
+          {cor}
+        </label>
+      ))}
       <ul>
         {cores.map((cor) => (
           <li key={cor}>{cor}</li>
