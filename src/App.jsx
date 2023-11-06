@@ -1,5 +1,7 @@
 import React from 'react';
 
+const coresArray = ['azul', 'roxo', 'laranja', 'verde', 'vermelho', 'cinza'];
+
 const App = () => {
   const [cores, setCores] = React.useState([]);
 
