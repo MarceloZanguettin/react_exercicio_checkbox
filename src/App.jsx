@@ -11,6 +11,10 @@ const App = () => {
     }
   }
 
+  function handleChecket(cor) {
+    return cores.includes(cor);
+  }
+
   return;
 };
 
