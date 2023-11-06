@@ -62,6 +62,11 @@ const App = () => {
         />
         Roxo
       </label>
+      <ul>
+        {cores.map((cor) => (
+          <li key={cor}>{cor}</li>
+        ))}
+      </ul>
     </form>
   );
 };
